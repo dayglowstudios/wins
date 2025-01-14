@@ -17,20 +17,15 @@ export default function WinsPage() {
   ])
 
   return (
-    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] p-4">
-      <header className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
-          <Link href="/" passHref>
-            <Button variant="ghost" size="icon" className="mr-2">
-              <ChevronLeft className="h-6 w-6 text-[#C6C6C6]" />
-            </Button>
-          </Link>
-          <h1 className="text-2xl font-bold text-[#E0FF4F]">All Wins</h1>
-        </div>
-        <div className="flex items-center bg-[#E0FF4F] rounded-full px-3 py-1">
-          <Zap className="w-4 h-4 text-black mr-1" />
-          <span className="text-sm font-semibold text-black">{calculateProductivityScore(wins, 21)}</span>
-        </div>
+    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] overflow-hidden">
+      <header className="flex items-center justify-between mb-8 p-4 pt-[calc(env(safe-area-inset-top)+3rem)]">
+        <Link href="/" passHref>
+          <Button variant="ghost" size="icon" className="rounded-full">
+            <ChevronLeft className="h-6 w-6 text-[#C6C6C6]" />
+          </Button>
+        </Link>
+        <h1 className="text-2xl font-bold text-[#E0FF4F]">All Wins</h1>
+        <div className="w-10"></div>
       </header>
 
       <div className="space-y-6">
@@ -64,7 +59,7 @@ function groupWinsByDate(wins) {
   }, {});
 }
 
-function formatDate(dateString) {
+function formatDate(dateString: string) {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return new Date(dateString).toLocaleDateString(undefined, options);
 }

@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={outfit.className}>
         <WinsProvider>
-          {children}
+          <div className="pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] bg-background">
+            {children}
+          </div>
         </WinsProvider>
       </body>
     </html>

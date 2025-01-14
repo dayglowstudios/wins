@@ -23,8 +23,8 @@ export function CategoryPage({ category }: CategoryPageProps) {
   const filteredWins = wins.filter(win => win.category === category)
 
   return (
-    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] p-4">
-      <header className="flex items-center justify-between mb-8">
+    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] overflow-hidden">
+      <header className="flex items-center justify-between mb-8 p-4 pt-[calc(env(safe-area-inset-top)+3rem)]">
         <Link href="/" passHref>
           <Button variant="ghost" size="icon" className="rounded-full">
             <ChevronLeft className="h-6 w-6 text-[#C6C6C6]" />

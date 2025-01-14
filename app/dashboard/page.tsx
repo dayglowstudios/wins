@@ -22,8 +22,8 @@ export default function UserDashboard() {
   ])
 
   return (
-    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] p-4">
-      <header className="flex items-center justify-between mb-8">
+    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] overflow-hidden">
+      <header className="flex items-center justify-between mb-8 p-4 pt-[calc(env(safe-area-inset-top)+3rem)]">
         <div className="flex items-center">
           <Link href="/" passHref>
             <Button variant="ghost" size="icon" className="mr-2">

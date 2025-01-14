@@ -59,8 +59,8 @@ export default function DailyWins() {
     <div className="relative w-full h-screen max-w-md mx-auto bg-[#000000] overflow-hidden">
       <div className="h-full overflow-y-auto">
         <div className="p-4">
-          {/* Header */}
-          <header className="flex items-center justify-between mb-8">
+          {/* Header with safe area padding */}
+          <header className="flex items-center justify-between mb-4 pt-[calc(env(safe-area-inset-top)+2rem)]">
             <div className="flex items-center gap-2">
               <Trophy className="w-6 h-6 text-[#E0FF4F]" />
               <span className="text-xl font-semibold tracking-tight text-[#E0FF4F]">wins</span>
@@ -85,8 +85,8 @@ export default function DailyWins() {
             </div>
           </header>
 
-          {/* Filter Ribbon */}
-          <div className="sticky top-0 mb-8 -mx-4 bg-black/30 backdrop-blur-xl border-b border-white/5 z-10 overflow-x-auto touch-pan-x scrollbar-hide">
+          {/* Filter Ribbon - Add safe area padding here too */}
+          <div className="sticky top-0 mb-8 -mx-4 bg-black/30 backdrop-blur-xl border-b border-white/5 z-10 overflow-x-auto touch-pan-x scrollbar-hide pt-[env(safe-area-inset-top)]">
             <div className="flex gap-2 py-4 px-4 w-max">
               <Button 
                 variant="secondary" 
@@ -189,7 +189,7 @@ export default function DailyWins() {
         </div>
       </div>
 
-      {/* Floating Action Button - Positioned for mobile app screen */}
+      {/* Floating Action Button */}
       <Button 
         className="absolute bottom-6 right-6 bg-[#E0FF4F] hover:bg-[#002FFF] hover:text-white text-black rounded-full h-14 w-14 shadow-lg flex items-center justify-center transition-colors z-10"
         size="icon"
@@ -198,6 +198,7 @@ export default function DailyWins() {
         <Plus className="h-6 w-6" />
       </Button>
 
+      {/* Modals */}
       <WinEntryModal
         isOpen={isWinModalOpen}
         onClose={() => setIsWinModalOpen(false)}

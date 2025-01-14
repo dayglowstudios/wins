@@ -63,8 +63,8 @@ export default function CalendarView() {
   }
 
   return (
-    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] p-4">
-      <header className="flex items-center justify-between mb-8">
+    <div className="relative w-full min-h-screen max-w-md mx-auto bg-[#000000] overflow-hidden">
+      <header className="flex items-center justify-between mb-8 p-4 pt-[calc(env(safe-area-inset-top)+3rem)]">
         <Link href="/" passHref>
           <Button variant="ghost" size="icon" className="rounded-full">
             <ChevronLeft className="h-6 w-6 text-[#C6C6C6]" />
@@ -74,7 +74,7 @@ export default function CalendarView() {
         <div className="w-10"></div>
       </header>
 
-      <Card className="bg-[#1A1A1A] text-[#C6C6C6] rounded-3xl p-6 mb-6">
+      <Card className="bg-[#1A1A1A] text-[#C6C6C6] rounded-3xl p-6 mb-6 mx-4">
         <div className="flex items-center justify-between mb-4">
           <Button onClick={prevMonth} variant="ghost" size="icon" className="text-[#C6C6C6]">
             <ChevronLeft className="h-6 w-6" />

@@ -1,0 +1,8 @@
+{
+  "appId": "com.iejackson.wins",
+  "appName": "Wins",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https"
+  }
+} 
